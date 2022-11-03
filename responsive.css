@@ -1,0 +1,258 @@
+@media (max-width:1350px){
+    body #content{
+        width: auto;
+    }
+    body footer #container{
+        width: auto;
+    }
+    body footer #container div{
+        width: auto;  
+    }
+}
+
+@media (max-width:1229px){
+    body #content .banner{
+        width: 90%;
+        margin: 0px auto;
+        margin-top: 25px;
+    }
+}
+@media (max-width: 1195px){
+    body #cards{
+        width: auto;
+    }
+    body #cuerpo{
+        width: auto;
+    }
+
+    body footer #container div a img{
+        width: 35px;
+        margin: 15px 5px 0px 8px;
+    }
+    body footer #container div .html{
+        width: 200px;
+    }
+    body footer #container div h3{
+        font-size: 35px; 
+        width: auto;
+    }
+}
+@media (max-width: 1150px){
+    body header nav ul{
+        margin-left: 30px;
+    }
+
+}
+
+@media (max-width: 1104px){
+    body header nav ul{
+        margin-left: 10px;
+    }
+    body footer #container div a img {
+        margin: 15px 5px 0px 38px;
+    }
+    body footer #container div .con {
+        margin-top: 108px;
+    }
+}
+
+@media (max-width: 1048px){
+    body #cuerpo aside #form .login input[type="submit"], body #cuerpo aside #form .login input[type="reset"]{
+        width: 70px;
+    }
+    body #cuerpo aside #form .net .icon p{
+        width: 55%;
+    }
+}
+
+@media (max-width: 1006px){
+    body #cards .card{
+        width: 150px;
+    }
+    body #cards .card a span{
+        font-size: 40px;
+    }
+    body #cards .card a h3{
+        font-size: 15px;
+    }
+    body #cards .card a p{
+        font-size: 15px;
+    }
+    body footer #container div .html{
+        width: 180px;
+    }
+    body #cuerpo aside #form .net .icon a {
+        margin-left: -30px;
+      }
+    body #cuerpo aside #form .net .icon p{
+        margin-left: 20px;
+    }
+}
+@media (max-width: 968px){
+    body header #blog a {
+        margin-left: 95px;
+    }
+    body header nav ul {
+        margin-left: 0px;
+    }
+    body header nav ul li {
+        margin-right: 20px;
+    }
+    body footer #container div a img {
+        margin: 15px 10px 0px 25px;
+    }
+    body footer #container div nav ul li a {
+        font-size: 20px;
+    }
+    body footer #container div .html {
+        margin: 15px 0px 0px 20px;
+    }
+    body footer #container div h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 870px){
+    body #cuerpo aside #form .login a{
+        font-size: 12px;
+    }
+    body footer #container div a img {
+        margin: 15px 10px 0px 20px;
+        width: 30px;
+    }
+    body #cuerpo aside #form h3{
+        font-size: 25px;
+    }
+    body #cuerpo aside #form .net .icon p{
+        width: 70%;
+    }
+    body footer #container div h3 {
+        font-size: 25px;
+    }
+    body footer #container div .html {
+        width: 170px;
+    }
+}
+
+@media (max-width:801px){
+    body #cuerpo aside #form .login input[type="submit"], body #cuerpo aside #form .login input[type="reset"] {
+        width: 60px;
+    }
+    body #cuerpo #contenido .título {
+        font-size: 20px;
+    }
+    body #cuerpo #contenido .artículos .artículo h3 a {
+        font-size: 20px;
+    }
+    body #cuerpo #contenido .artículos .artículo p{
+        font-size: 15px;
+    }
+    body #cards .card {
+        width: 120px;
+        height: 200px;
+    }
+    body #cards .card a p {
+        display: none;
+    }
+    body #cards .card:hover a p{
+        display: none;
+    }
+    body footer #container div .html {
+        margin: 15px 0px 0px 12px;
+    }
+}
+@media (max-width:787px){
+    body header{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+    }
+    body header #blog{
+        text-align: center;
+        margin-left: 0px;
+        overflow: hidden;
+    }
+    body header #blog a {
+        margin-left: 0px;
+      }
+    body header nav{
+        text-align: center;
+    }
+    body header nav ul li {
+        margin-left: 20px;
+    }
+    body footer{
+        height: 1250px;
+    }
+    body footer #container{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    body footer #container div .html {
+        width: 200px;
+        margin: 15px 0px 6px 83px;
+    }
+    body footer #container div .con {
+        margin-top: 67px;
+    }
+    body #cuerpo aside #form .net .icon p {
+        width: 80%;
+    }
+}
+@media (max-width:765px){
+    body #cuerpo{
+        display: grid;
+        grid-template-rows: 50% 50%;
+    }
+    body #cuerpo aside {
+        width: 100%;
+    }
+    body #cuerpo #contenido{
+        width: 100%
+    }
+    body #cuerpo aside .p2{
+        display: none;
+    }
+    body #cuerpo #contenido{
+        margin-top: 20px;
+    }
+    body #cuerpo aside #form{
+        width: 40%;
+    }
+    body #cuerpo {
+        margin-top: 0px;
+    }
+    body #content #left{
+        display: block;
+    }
+}
+@media (max-width:614px){
+    body #cards {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    } 
+    body #cards .card {
+        margin-bottom: 10px;
+    }
+    body #cuerpo #contenido .artículos .artículo span{
+        width: 35%;
+    }
+}
+@media (max-width:473px){
+    body header{
+        height: 240px;
+    }
+    body #cuerpo #contenido .artículos .artículo{
+        height: auto;
+    }
+    body footer #container div a img{
+        margin-left: 5px;
+    }
+    body footer #container div .html {
+        margin-left: 55px;
+    }
+}
+
+

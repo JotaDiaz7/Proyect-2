@@ -1,0 +1,636 @@
+@font-face {
+    font-family: 'TrebuchetMS';
+    src: url("recursos-maquetacion-2-master-css-victor-robles/fonts/TrebuchetMS.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url("recursos-maquetacion-2-master-css-victor-robles/fonts/BebasNeue.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WebsymbolsRegular';
+    src: url("recursos-maquetacion-2-master-css-victor-robles/fonts/websymbols-regular-webfont.eot");
+    src: url("recursos-maquetacion-2-master-css-victor-robles/fonts/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype');
+    src: url("recursos-maquetacion-2-master-css-victor-robles/fonts/websymbols-regular-webfont.ttf") format('truetype'),
+        url("recursos-maquetacion-2-master-css-victor-robles/fonts/websymbols-regular-webfont.woff") format('wof'),
+        url("recursos-maquetacion-2-master-css-victor-robles/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    header{
+        background-color: black;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 70px;
+        font-family: BebasNeue;
+        width: 100%;
+        line-height: 70px;
+        overflow: hidden;
+        #blog{
+            a{
+                background-color: #37BCF9;
+                text-decoration: none;
+                color: white;
+                margin-left: 180px;
+                padding: 25px 50px 10px 40px;
+                span{
+                    font-size: 30px;
+                    font-family: WebsymbolsRegular;
+                    margin-right: 10px;
+                    display: inline-block;
+                    animation-name: rotatewheel;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+                @keyframes rotatewheel{
+                    from{
+                        transform: rotateZ(0deg)
+                    }
+                    to{
+                        transform: rotateZ(360deg);
+                    }
+                }
+                h3{
+                    font-size: 40px;
+                    font-weight: bold;
+                    display: inline-block 
+                }
+            }
+            a:hover{
+                background-color: white;
+                color: black;
+            }
+            a:hover h3{
+                animation: right 500ms linear;
+            }
+            @keyframes right {
+                from{
+                    transform: translateX(200%);
+                }
+                to{
+                    transform: translateX(0%);
+                }
+            }
+            a:hover span{
+                animation: below 500ms linear;
+            }
+            @keyframes below {
+                from{
+                    transform: translateY(200%);
+                }
+                to{
+                    transform: translateY(0%);
+                }
+            }
+        }
+        nav{
+            ul{
+                margin-left: 100px;
+                li{
+                    margin-right: 10px;
+                    display: inline-block;
+                    margin-right: 40px;
+                    a{
+                        display: block;
+                        color: white;
+                        text-decoration: none;
+                        font-size: 25px;
+                        letter-spacing: 1px;
+                        transition: 200ms all;
+                    }
+                    a:hover{
+                        color: #37BCF9;
+                        transform: scale(1.2,1.2);                    }
+                }
+            }
+        }
+    }
+    #content{
+        width: 1200px;
+        margin: 0px auto;        
+        .banner{
+            display: block;
+            width: 100%;
+            margin-top: 25px;
+            text-align: center;
+            height: 100px;
+            background-image: url(recursos-maquetacion-2-master-css-victor-robles/img/bakbaner.png);
+            border: 5px solid lightgrey;
+            box-shadow: 0px 0px 2px gray;
+            animation: move 20s infinite linear;
+            overflow: hidden;
+            h1{
+                line-height: 100px;
+                font-family: "BebasNeue";
+                color: white;
+                letter-spacing: 2px;
+                font-size: 40px;
+                text-shadow: 2px 2px 1px black;
+                animation: text 15s linear;
+            }
+        }
+        @keyframes move {
+            0%{
+                background-position: 0px 0px;
+            }
+            50%{
+                background-position: -200px -200px;
+            }
+            100%{
+                background-position: 0px 0px;
+            }
+            
+        }
+        @keyframes text {
+            0%{
+                transform: translateX(-400%) scale(3,3);
+                opacity: 1;
+            }
+            50%{
+                transform: translateX(400%) scale(3,3);
+                opacity: 1;
+            }
+            75%{
+                transform: translateX(-400%) scale(3,3);
+                color: transparent;
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0%) scale(1,1);
+            }
+        }
+        #left{
+            display: none;
+            position: fixed;
+            div{
+                width: 30px;
+                color: #00538c;
+                height: 40px;
+                line-height: 40px;
+                border: 3px solid black;
+                background-color: white;
+                border-radius: 0px 99px 99px 0px;
+                cursor: pointer;
+                transition: all 400ms;
+                overflow: hidden;
+                span{
+                    float: right;
+                    font-family: 'WebsymbolsRegular';
+                    margin-right: 7px;
+                }
+                p{
+                    display: none;
+                    font-family: BebasNeue;
+                    letter-spacing: 3px;
+                    margin-left: 5px;
+                    font-size: 17px;
+                    transition: all 400ms;
+                }
+            }
+            div:hover{
+                width: 90px;
+                p{
+                    display: inline;
+                }
+            }
+            .net2:hover{
+                width: 160px;
+            }
+            .col2:hover{
+                width: 165px;
+            }
+        }
+    }
+    #cards{
+        width: 1200px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        margin-top: 60px;
+        .card{
+            margin: 0px auto;
+            height: 300px;
+            width: 200px;
+            border: 1px solid lightgray;
+            box-shadow: 2px 2px rgb(181, 180, 180);
+            text-align: center;
+            cursor: pointer;
+            a{
+                font-family: "TrebuchetMS";
+                text-decoration: none;
+                color: black;
+                span{
+                    font-family: WebsymbolsRegular;
+                    font-size: 50px;
+                    line-height: 115px;
+                }
+                h3{
+                    margin-top: 10px;
+                    font-size: 20px;
+                    color: #00538c;
+                }
+                p{
+                    margin-top: 25px;
+                    color: #4A71AB;
+                }
+            }
+        }
+        .card:hover{
+            background-color: black;
+            overflow: hidden;
+            a{
+                span{
+                    display: block;
+                    color: #37BCF9;
+                    font-size: 70px;
+                    animation: wheeldown 300ms linear;
+                }
+                @keyframes wheeldown{
+                    from{
+                        transform: translateY(-200px);
+                    }
+                    to{
+                        transform: translateY(0%);
+                    }
+                }
+                h3{
+                    color: white;
+                    display: block;
+                    animation:textleft 300ms linear;
+                }
+                @keyframes textleft{
+                    from{
+                        transform: translateX(-150px);
+                    }
+                    to{
+                        transform: translateX(0%);
+                    }
+                }
+                p{
+                    color: white;
+                    display: block;
+                    animation:textup 300ms linear;
+                }
+                @keyframes textup{
+                    from{
+                        transform: translateY(100px);
+                    }
+                    to{
+                        transform: translateY(0%);
+                    }
+                }
+            }
+        }
+    }
+    #cuerpo{
+        width: 1200px;
+        margin: 0px auto;
+        margin-top: 50px;
+        aside{
+            float: right;
+            width: 27%;
+            #form{
+                text-align: center;
+                margin-top: 25px;
+                margin-right: 34px;
+                h3{
+                    width: 100%;
+                    font-family: "BebasNeue";
+                    background: url(recursos-maquetacion-2-master-css-victor-robles/img/puf.png);
+                    background-size: 15%;
+                    letter-spacing: 3px;
+                    font-size: 30px;
+                    height: 45px;
+                    line-height: 45px;
+                    box-shadow: 3px 4px 0px #393d3f;
+                    padding-left: 15px;
+                    text-align: left;
+                }
+                .buscar{
+                    form{
+                        width: 100%;
+                        border: 1px solid lightgray;
+                        box-shadow: 1px 1px 5px rgb(152, 151, 151) inset;
+                        border-radius: 5px;
+                        height: 30px;
+                        margin-top: 15px;
+                        input{
+                            height: 30px;
+                        }
+                        input[type="text"]{
+                            width: 87%;
+                            float: left;
+                            border: none;
+                            background-color: transparent;
+                        }
+                        input[type="submit"]{
+                            width: 13%;
+                            font-family: WebsymbolsRegular;
+                            font-size: 15px;
+                            color: rgb(85, 83, 83);
+                            float: right;
+                            border: 1px solid lightgray;
+                            cursor: pointer;                    
+                        }
+                    }
+                }
+                .login{
+                    border-left: 1px solid #ccc;
+                    border-bottom: 5px solid #ccc;
+                    width: 90%;
+                    height: 220px;
+                    margin-top: 40px;
+                    margin-left: 25px;
+                    label{
+                        font-family: WebsymbolsRegular;
+                        display: block;
+                        position: absolute;
+                        margin-left: 18px;
+                        margin-top: 5px;
+                    }
+                    .password{
+                        margin-top: 26px;
+                        font-size: 20px;
+                    }
+                    input[type="email"],
+                    input[type="password"]{
+                        display: block;
+                        margin-top: 20px;
+                        width: 80%;
+                        margin-left: 40px;
+                        height: 30px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        box-shadow: 1px 1px 1px #ccc inset;    
+                    }
+                    input[type="submit"],
+                    input[type="reset"]{
+                        margin-top: 20px;
+                        margin-left: 10px;
+                        margin-bottom: 20px;
+                        cursor: pointer;
+                        width: 100px;
+                        height: 35px;
+                        background:linear-gradient(#3eb8e5 0%,  #2ca0ca 100%) ;
+                        border: 1px solid rgb(21, 91, 112);
+                        color: white;
+                        font-size: 15px;
+                    }
+                    a{
+                        display: block;
+                        float: left;
+                        margin-left: 10px;
+                        text-decoration: none;
+                        color: rgb(69, 68, 68);
+                        font-family: "TrebuchetMS";
+                        font-size: 14px;
+                    }
+                    a:hover{
+                        color: #3eb8e5;
+                        text-decoration: underline;
+                    }
+                }
+                .net{
+                    border-left: 1px solid #ccc;
+                    border-bottom: 5px solid #ccc;
+                    width: 90%;
+                    height: 200px;
+                    margin-top: 40px;
+                    margin-left: 25px;
+                    .icon{
+                        display: block;
+                        margin-top: 40px;
+                        margin-left: 50px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        a{
+                            display: block;
+                            font-family: 'WebsymbolsRegular';
+                            color: black;
+                            text-decoration: none;
+                            float: left;
+                            font-size: 30px;
+                        }
+                        p{
+                            display: block;
+                            background-color: #393d3f;
+                            color: white;
+                            width: 45%;
+                            height: 30px;
+                            line-height: 30px;
+                            margin-left: 50px;
+                            border-radius: 20px;
+                            font-weight: bold;
+                            transition: all 400ms;
+                            transform: translateX(-80px);
+                            opacity: 0;
+                            letter-spacing: 1px;
+                        }
+                    }
+                    .icon:hover p{
+                        opacity: 1;
+                        transform: translateX(0%);
+                    }
+                }
+
+            }
+        }
+        #contenido{
+            width: 68%;
+            .título{
+                text-align: center;
+                font-family: "BebasNeue";
+                height: 70px;
+                line-height: 70px;
+                background: url(recursos-maquetacion-2-master-css-victor-robles/img/puf.png);
+                background-size: 15%;
+                box-shadow: 3px 4px 0px #393d3f;
+                font-size: 25px;
+                letter-spacing: 3px;
+            }
+            .artículos{
+                font-family: "TrebuchetMS";
+                .artículo{
+                    margin-top: 40px;
+                    border: 2px solid lightgrey;
+                    height: 100px;
+                    h3{
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        margin-left: 15px;
+                        width: 50%;
+                        a{
+                            font-size: 23px;
+                            text-decoration: none;
+                            color: #00538c;
+                        }
+                        a:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    span{
+                        background-color: #393d3f;
+                        color: white;
+                        height: 30px;
+                        width: 25%;
+                        float: right;
+                        font-size: 13px;
+                        text-align: center;
+                        letter-spacing: 1px;
+                        line-height: 30px;
+                        border-radius: 0px 0px 0px 5px;
+                    }
+                    p{
+                        margin-left: 15px;
+                        a{
+                            text-decoration: none;
+                            color: #4A71AB;
+                        }
+                        a:hover{
+                            color: #00538c;
+                        }
+                    }
+                }
+            }
+            #button{
+                margin-top: 40px;
+                border: 2px solid lightgrey;
+                height: 120px;
+                text-align: center;
+                line-height: 120px;
+                a{
+                    text-decoration: none;
+                    color: #00538c;
+                    font-family: BebasNeue;
+                    font-size: 40px;
+                    letter-spacing: 2px;
+                }
+            }
+            #button:hover{
+                background: #393d3f;
+                border-radius: 100px;
+                border: 12px solid #3eb8e5;
+                animation: color 10s infinite linear;
+                a{
+                    color: white;
+                    text-shadow: 0px 5px black;
+                }
+            }
+            @keyframes color {
+                0%{
+                    border: 12px solid #3eb8e5;
+                }
+                25%{
+                    border: 12px solid yellowgreen;
+                }
+                50%{
+                    border: 12px solid orangered;
+                }
+                75%{
+                    border: 12px solid green;
+                }
+                100%{
+                    border: 12px solid palevioletred;
+                }
+            }
+        }
+    }
+    footer{
+        display: grid;
+        background: black;
+        height: 470px;
+        margin-top: 70px;
+        overflow: hidden;
+        #container{
+            margin: 0px auto;
+            width: 80%;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            div{
+                width: 320px;
+                height: auto;
+                margin: 40px;
+                h3{
+                    width: 100%;
+                    background: white;
+                    text-align: center;
+                    height: 55px;
+                    line-height: 55px;
+                    border-radius: 7px;
+                    font-family: BebasNeue;
+                    font-size: 40px;
+                    letter-spacing: 2px;
+                }
+                nav{
+                    ul{
+                        li{
+                            list-style: none;
+                            height: 70px;
+                            line-height: 70px;
+                            border-bottom: 1px solid white;
+                            a{
+                                text-decoration: none;
+                                color: #37BCF9;
+                                font-family: "TrebuchetMS";
+                                font-size: 25px;
+                                margin-left: 20px;
+                                letter-spacing: 1px;
+                                transition: all 300ms linear;
+                            }
+                        }
+                        li:hover a{
+                            margin-left: 60px;
+                        }
+                    }
+                }
+                iframe{
+                    height: 300px;
+                    width: 100%;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                }
+                .html{
+                    margin: 15px 0px 0px 40px;
+                    width: auto;
+                } 
+                a{
+                    img{
+                        margin: 15px 0px 0px 8px;
+                        float: left;
+                        width: 45px;
+                    }
+                }
+                p{
+                    color: white;
+                    font-family: "TrebuchetMS";
+                    text-align: center;
+                    margin-top: 10px;
+                    letter-spacing: 1px;
+                    a{
+                        color: #37BCF9;
+                        text-decoration: none;
+                    }
+                }
+                .con{
+                    margin-top: 70px;
+                }
+
+            }
+        }
+    }
+}
+
+
